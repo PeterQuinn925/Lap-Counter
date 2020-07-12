@@ -4,11 +4,14 @@ This project is a device to count laps when swimming. It uses an ultrasonic sens
 
 Uses: https://github.com/going-digital/Talkie for speech synth calling out the numbers
 
-Parts:
-Generic Arduino Nano clone
-Mono Amp - SparkFun Mono Audio Amp Breakout - TPA2005D1- https://www.sparkfun.com/tutorials/392
-Battery Charger Board - SparkFun LiPo Charger Basic - Micro-USB
-LiPo Battery - Lithium Ion Battery - 400mAh
-Momentary Switch
-On/Off toggle switch
-8-ohm Speaker (salvaged) 
+### Parts:
+1. Generic Arduino Nano clone
+2. Mono Amp
+   SparkFun Mono Audio Amp Breakout - TPA2005D1
+   https://www.sparkfun.com/tutorials/392  
+3. Battery Charger Board
+   SparkFun LiPo Charger Basic - Micro-USB
+4. LiPo Battery - Lithium Ion Battery - 400mAh
+5. Momentary Switch
+6. On/Off toggle switch
+7. 8-ohm Speaker (salvaged) 
