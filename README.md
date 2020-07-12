@@ -15,3 +15,5 @@ Uses: https://github.com/going-digital/Talkie for speech synth calling out the n
 5. Momentary Switch
 6. On/Off toggle switch
 7. 8-ohm Speaker (salvaged) 
+
+![Fritzing Jpg](https://github.com/PeterQuinn925/Lap-Counter/blob/master/lap_counter.jpg)
