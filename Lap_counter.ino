@@ -4,6 +4,12 @@
 #define interruptPin 2 // attach interrupt switch to pin D2
 #include "Talkie.h"
 #include "Vocab_US_Large.h"
+#include <Wire.h> // Enable this line if using Arduino Uno, Mega, etc.
+#include <Adafruit_GFX.h>
+#include "Adafruit_LEDBackpack.h"
+//Pin A4 to DAT on LED
+//Pin A5 to CLK on LED
+Adafruit_7segment matrix = Adafruit_7segment();
 //talkie uses digital pin 3
 Talkie voice;
 //const byte interruptPin = 2;
@@ -28,6 +34,7 @@ void setup() {
   pinMode(amponPin, OUTPUT);
   attachInterrupt(digitalPinToInterrupt(interruptPin), restart, LOW);
   Serial.begin(9600); // // Serial Communication is starting with 9600 of baudrate speed
+  matrix.begin(0x70);
   start_time = millis();
   last_lap_t = start_time;
   // Serial.println("Lap Counter");
@@ -43,12 +50,20 @@ void loop() {
     voice.say(sp2_TWO);
     voice.say(sp4_START);
     delay(1000);
+    matrix.println(333,DEC);
+    matrix.writeDisplay();
     voice.say(sp2_THREE);
     delay(500);
+    matrix.println(22,DEC);
+    matrix.writeDisplay();
     voice.say(sp2_TWO);
     delay(500);
+    matrix.println(1,DEC);
+    matrix.writeDisplay();    
     voice.say(sp2_ONE);
     delay(500);
+    matrix.println(0000,DEC);
+    matrix.writeDisplay();
     voice.say(sp2_GO);
     digitalWrite(amponPin, LOW); // turn off the amp
     Serial.println("amp off");
@@ -75,6 +90,8 @@ void loop() {
       Serial.println(TimeToString(millis() - start_time));
       Serial.print("Lap time: ");
       Serial.println(TimeToString(millis() - last_lap_t));
+      matrix.println(yards);
+      matrix.writeDisplay();
       CallLap(yards);
       delay(3000);
     }
