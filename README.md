@@ -2,6 +2,8 @@
 
 This project is a device to count laps when swimming. It uses an ultrasonic sensor to detect the swimmer and counts 50 yds/meters (out and back of a short course standard swimming pool. It calls out the distance on a speaker and shows on a 4 digit 7 seg LED. Future version may display the time also or transmit distance/time to a smart watch.
 
+Right now the volume on the speaker is still pretty low, even with the amp. It's also much noisier with the addition of the LED. I'm considering adding capacitors to reduce the noise or even getting rid of the speaker entirely. Other future considerations is to show the elapse time and the lap time - but I'm not sure what the best way to do that is.
+
 Uses: https://github.com/going-digital/Talkie for speech synth calling out the numbers
 Adafruit librarys for LED display.
 
