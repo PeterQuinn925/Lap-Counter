@@ -1,8 +1,9 @@
 # Lap-Counter
 
-This project is a device to count laps when swimming. It uses an ultrasonic sensor to detect the swimmer and counts 50 yds/meters (out and back of a short course standard swimming pool. It calls out the distance on a speaker. Future version may display the distance or possibly transmit them to a smart watch.
+This project is a device to count laps when swimming. It uses an ultrasonic sensor to detect the swimmer and counts 50 yds/meters (out and back of a short course standard swimming pool. It calls out the distance on a speaker and shows on a 4 digit 7 seg LED. Future version may display the time also or transmit distance/time to a smart watch.
 
 Uses: https://github.com/going-digital/Talkie for speech synth calling out the numbers
+Adafruit librarys for LED display.
 
 ### Parts:
 1. Generic Arduino Nano clone
