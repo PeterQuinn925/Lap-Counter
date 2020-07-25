@@ -1,5 +1,5 @@
-#define echoPin 5 // attach pin D2 Arduino to pin Echo of HC-SR04
-#define trigPin 6 //attach pin D3 Arduino to pin Trig of HC-SR04
+#define echoPin 5 // attach pin D5 Arduino to pin Echo of HC-SR04
+#define trigPin 6 //attach pin D6 Arduino to pin Trig of HC-SR04
 #define amponPin 12 //attach pin D12 to the SD pin of amp to control power saving
 #define interruptPin 2 // attach interrupt switch to pin D2
 #include "Talkie.h"
