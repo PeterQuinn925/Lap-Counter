@@ -12,8 +12,10 @@ Uses: https://github.com/going-digital/Talkie for speech synth calling out the n
 3. Battery Charger Board
    SparkFun LiPo Charger Basic - Micro-USB
 4. LiPo Battery - Lithium Ion Battery - 400mAh
-5. Momentary Switch
-6. On/Off toggle switch
-7. 8-ohm Speaker (salvaged) 
+5. Battery Booster  https://www.adafruit.com/product/4654 (3v to 5v)
+6. 4 digit 7 seg LED. With controlling circuit. https://www.adafruit.com/product/878
+7. Momentary Switch
+8. On/Off toggle switch
+9. 8-ohm Speaker (salvaged) 
 
 ![Fritzing Jpg](https://github.com/PeterQuinn925/Lap-Counter/blob/master/lap_counter.jpg)
