@@ -22,3 +22,4 @@ Adafruit librarys for LED display.
 9. 8-ohm Speaker (salvaged) 
 
 ![Fritzing Jpg](https://github.com/PeterQuinn925/Lap-Counter/blob/master/lap_counter.jpg)
+![Photo](https://github.com/PeterQuinn925/Lap-Counter/blob/master/lap_counter_photo.jpg)
