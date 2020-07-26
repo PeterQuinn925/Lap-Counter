@@ -11,17 +11,18 @@ Adafruit librarys for LED display.
 
 ### Parts:
 1. Generic Arduino Nano clone
-2. Mono Amp
+2. Ultrasonic Sensor HC-SR04
+3. Mono Amp
    SparkFun Mono Audio Amp Breakout - TPA2005D1
    https://www.sparkfun.com/tutorials/392  
-3. Battery Charger Board
+4. Battery Charger Board
    SparkFun LiPo Charger Basic - Micro-USB
-4. LiPo Battery - Lithium Ion Battery - 400mAh
-5. Battery Booster  https://www.adafruit.com/product/4654 (3v to 5v)
-6. 4 digit 7 seg LED. With controlling circuit. https://www.adafruit.com/product/878
-7. Momentary Switch
-8. On/Off toggle switch
-9. 8-ohm Speaker (salvaged) 
+5. LiPo Battery - Lithium Ion Battery - 400mAh
+6. Battery Booster  https://www.adafruit.com/product/4654 (3v to 5v)
+7. 4 digit 7 seg LED. With controlling circuit. https://www.adafruit.com/product/878
+8. Momentary Switch
+9. On/Off toggle switch
+10. 8-ohm Speaker (salvaged) 
 
 ![Fritzing Jpg](https://github.com/PeterQuinn925/Lap-Counter/blob/master/lap_counter.jpg)
 ![Photo](https://github.com/PeterQuinn925/Lap-Counter/blob/master/lap_counter_photo.jpg)
