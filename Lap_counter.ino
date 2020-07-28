@@ -37,7 +37,6 @@ void setup() {
   matrix.begin(0x70);
   start_time = millis();
   last_lap_t = start_time;
-  // Serial.println("Lap Counter");
 }
 
 void loop() {
@@ -50,19 +49,19 @@ void loop() {
     voice.say(sp2_TWO);
     voice.say(sp4_START);
     delay(1000);
-    matrix.println(333,DEC);
+    matrix.println(333, DEC);
     matrix.writeDisplay();
     voice.say(sp2_THREE);
     delay(500);
-    matrix.println(22,DEC);
+    matrix.println(22, DEC);
     matrix.writeDisplay();
     voice.say(sp2_TWO);
     delay(500);
-    matrix.println(1,DEC);
-    matrix.writeDisplay();    
+    matrix.println(1, DEC);
+    matrix.writeDisplay();
     voice.say(sp2_ONE);
     delay(500);
-    matrix.println(0000,DEC);
+    matrix.println(0000, DEC);
     matrix.writeDisplay();
     voice.say(sp2_GO);
     digitalWrite(amponPin, LOW); // turn off the amp
@@ -83,7 +82,7 @@ void loop() {
   {
     lap_count++;
     yards = lap_count * 50;
-    while (GetDist() < min_distance) {
+    do {
       Serial.print("Distance:");
       Serial.println(yards);
       Serial.print("Elapsed time: "); \
@@ -95,6 +94,7 @@ void loop() {
       CallLap(yards);
       delay(3000);
     }
+    while (GetDist() < min_distance);
     last_lap_t = millis();
   }
 }
