@@ -13,6 +13,7 @@ volatile boolean restart_now = true;
 // defines variables
 unsigned long start_time;
 unsigned long last_lap_t;
+unsigned long last_clock;
 int lap_count;
 int yards;
 int swap; //counter to determine when to swap time vs yards. Will swap every n loop iterations
@@ -57,6 +58,7 @@ void loop() {
     delay(1000);
     restart_now = false;//for some reason it's running twice. This cures it.
     start_time = millis();
+    last_clock = start_time;
     last_lap_t = start_time;
     lap_count = 0;
     yards = 0;
@@ -66,18 +68,24 @@ void loop() {
   current_t = millis();
 
   //Serial.println(current_t -last_lap_t);
-  if (swap % 50 == 0)
-  { if (disp_yards)
-    { disp_yards = false;
+  if (not disp_yards)
+  {
+    if (TimeToInt(last_clock) < TimeToInt(millis() - start_time)) {
       matrix.println(TimeToInt(millis() - start_time));
       matrix.drawColon(true);
       matrix.writeDisplay();
+      last_clock = millis()-start_time;
       //Serial.println(TimeToInt(millis() - start_time));
+    }
+  }
+  if (swap % 50 == 0)
+  { if (disp_yards)
+    { disp_yards = false;
     }
     else {
       matrix.println(yards);
-      matrix.writeDisplay();
       matrix.drawColon(false);
+      matrix.writeDisplay();
       //Serial.println(yards);
       disp_yards = true;
     }
